@@ -1,0 +1,234 @@
+*** Website Header - header.ejs
+
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="/">NodeJs</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="nav col-12 col-md-auto flex-fill mb-2 justify-content-center mb-md-0" role="search" method="POST" action="/search">
+    <input type="search" name="searchTerm" class="form-control form-control-dark w-100 rounded-0 border-0" placeholder="Search..." aria-label="Search">
+  </form>
+</header>
+
+
+*** Website Sidebar - sidebar.ejs
+
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+  <div class="position-sticky pt-3 sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/">
+          <i class="bi bi-house"></i>
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">
+          <i class="bi bi-patch-question"></i>
+          About
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+*** Dymmy Data
+async function insertDesDonnees(){
+  try {
+    await Client.insertMany([
+      {
+        nom: "Raddy",
+        prenom: "NodeJs",
+        telephone: "1-353-218-4881",
+        email: "raddy@outlook.couk",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Aphrodite",
+        prenom: "Parker",
+        telephone: "1-857-407-8574",
+        email: "quam@protonmail.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Camden",
+        prenom: "Perce",
+        telephone: "(251) 719-5886",
+        email: "aliquam.tincidunt.nunc@icloud.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Emi",
+        prenom: "Hutchinson",
+        telephone: "1-878-674-6876",
+        email: "aenean.egestas@aol.org",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Chaim",
+        prenom: "Holland",
+        telephone: "1-776-825-8236",
+        email: "a@google.couk",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Harding",
+        prenom: "Cameron",
+        telephone: "1-935-750-3637",
+        email: "non.nisi@outlook.edu",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Dane",
+        prenom: "Kelley",
+        telephone: "(129) 964-3195",
+        email: "morbi@aol.org",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Emery",
+        prenom: "Thornton",
+        telephone: "(565) 248-4784",
+        email: "egestas.blandit.nam@icloud.org",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Tarik",
+        prenom: "Francis",
+        telephone: "1-679-436-4746",
+        email: "lacus@outlook.ca",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+            {
+        nom: "Rebecca",
+        prenom: "Booth",
+        telephone: "1-548-944-3232",
+        email: "sapien@icloud.couk",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Solomon",
+        prenom: "Larson",
+        telephone: "(648) 588-4779",
+        email: "accumsan.interdum@icloud.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Tanner",
+        prenom: "Morin",
+        telephone: "(189) 577-5612",
+        email: "nec.diam.duis@google.couk",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "September",
+        prenom: "Walton",
+        telephone: "1-732-422-2492",
+        email: "sed.sapien.nunc@icloud.com",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Kermit",
+        prenom: "Becker",
+        telephone: "1-163-757-8638",
+        email: "id@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Anish",
+        prenom: "Brown",
+        telephone: "1-163-757-8638",
+        email: "Anish@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Duncan",
+        prenom: "Woodard",
+        telephone: "1-163-757-8638",
+        email: "Duncan@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Izabella",
+        prenom: "Stark",
+        telephone: "1-163-757-8638",
+        email: "Izabella@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Dhruv",
+        prenom: "Fields",
+        telephone: "1-163-757-8638",
+        email: "Dhruv@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Harriet",
+        prenom: "Gillespie",
+        telephone: "1-163-757-8638",
+        email: "Harriet@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Chad",
+        prenom: "Barton",
+        telephone: "1-163-757-8638",
+        email: "Chad@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+      {
+        nom: "Esmee",
+        prenom: "Trujillo",
+        telephone: "1-163-757-8638",
+        email: "Esmee@yahoo.net",
+        detail: "Demo details text.",
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      },
+    ]);
+  } catch (error) {
+    console.log("err", + error);
+  }
+}
+insertDesDonnees();

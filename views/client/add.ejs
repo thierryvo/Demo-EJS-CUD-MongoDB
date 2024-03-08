@@ -1,0 +1,78 @@
+<!-- ESJ02_CRUD / fichier: views/client/add.ejs -->
+<!-- (FORMULAIRE ADD  CLIENT) ----------------- -->
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Client</h1>
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <button class="btn btn-sm btn-outline-secondary">?</button>
+    </div>
+  </div>
+</div>
+
+<!-- une nav avec lien sur index et un titre -->
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <!-- lien: index client: '/client/' -->
+          <li class="breadcrumb-item">
+            <a href="<%= urlIndexClient %>">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">SAISIE NOUVEAU CLIENT</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col text-end fw-lighter">
+      <b>UserId</b>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULAIRE DE SAISIE CLIENT: POST avec '/add' => pour ajout client -->
+<form action="<%= urlClientAdd %>" method="POST">
+  <!-- form groupe colonné -->
+  <div class="row form-group mb-4">
+    <!-- nom -->
+    <div class="col">
+      <label for="nom">Nom</label>
+      <input type="text" class="form-control" 
+             id="nom" name="nom" value="" placeholder="Nom" required>
+    </div>
+    <!-- prenom -->
+    <div class="col">
+      <label for="prenom">prenom</label>
+      <input type="text" class="form-control"
+             id="prenom" name="prenom" value="" placeholder="Prenom" required>
+    </div>
+  </div>
+
+  <!-- form groupe colonné -->
+  <div class="row form-group mb-4">
+    <!-- telephone -->
+    <div class="col">
+      <label for="tel">Telephone</label>
+      <input type="text" class="form-control"
+             id="telephone" name="telephone" value="" placeholder="Telephone" required>
+    </div>
+    <!-- email -->
+    <div class="col">
+      <label for="email">Email</label>
+      <input type="text" class="form-control"
+             id="email" name="email" value="" placeholder="Email" required>
+    </div>
+  </div>
+
+  <!-- form groupe -->
+  <!-- detail -->
+  <div class="form-group mb-4">
+      <label for="detail">Client détail</label>
+      <textarea class="form-control" cols="30" rows="12"
+                id="detail" name="detail" placeholder="Client detail..."></textarea>
+  </div>
+
+  <!-- BOUTON ADD CLIENT -->
+  <div class="form-group mb-4">
+    <button type="submit" class="btn btn-primary">ADD CLIENT</button>
+  </div>
+</form>

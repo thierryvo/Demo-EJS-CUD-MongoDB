@@ -1,0 +1,77 @@
+<!-- ESJ02_CRUD / fichier: views/client/view.ejs -->
+<!-- (PAGE VISU CLIENT) ------------------------ -->
+<!-- Résume: -->
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2"><%= r_client.nom  %> <%= r_client.prenom  %></h1>
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+    </div>
+  </div>
+</div>
+<!-- BLOC haut -->
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <!-- lien retour Acceuil  + nom prénom -->
+          <li class="breadcrumb-item"><a href="<%= urlIndexClient %>">Dashboard</a></li>
+          <li class="breadcrumb-item active"><%= r_client.nom %> <%= r_client.prenom %></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col text-end fw-lighter">
+      <b>Dernière mise à jour: <%= new Date(r_client.updatedAt).toUTCString()  %></b>
+      <b>ID client:</b> <%= r_client._id %>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENTATION AFFICHAGE du CLIENT ---------------------------------------------- -->
+<ul class="list-group">
+  <!-- li: nom + prenom -->
+  <li class="list-group-item"> 
+    <div class="row">
+      <div class="col" style="max-width: 140px"> <b>Nom:</b></div>
+      <div class="col"><%= r_client.nom %> <%= r_client.prenom %></div>
+    </div>
+  </li>
+  <!-- li: telephone -->
+  <li class="list-group-item"> 
+    <div class="row">
+      <div class="col" style="max-width: 140px"> <b>Téléphone::</b></div>
+      <div class="col"><%= r_client.telephone %></div>
+    </div>
+  </li>
+  <!-- li: email -->
+  <li class="list-group-item"> 
+    <div class="row">
+      <div class="col" style="max-width: 140px"> <b>Email:</b></div>
+      <div class="col"><%= r_client.email %></div>
+    </div>
+  </li>
+  <!-- li: detail -->
+  <li class="list-group-item"> 
+    <div class="row">
+      <div class="col" style="max-width: 140px"> <b>Détail:</b></div>
+      <div class="col"><%= r_client.detail %></div>
+    </div>
+  </li>
+  <!-- li: Date de Créarion -->
+  <li class="list-group-item"> 
+    <div class="row">
+      <div class="col" style="max-width: 140px"> <b>Date de Créarion:</b></div>
+      <div class="col"><%= r_client.createdAt %></div>
+    </div>
+  </li>
+  <!-- li: Date de Modification -->
+  <li class="list-group-item"> 
+    <div class="row">
+      <div class="col" style="max-width: 140px"> <b>Date de Modification:</b></div>
+      <div class="col"><%= r_client.updatedAt %></div>
+    </div>
+  </li>
+
+</ul>
